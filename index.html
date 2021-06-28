@@ -75,7 +75,7 @@ if (findGetParameter("fname") != null) {
   months[10] = "Nov";
   months[11] = "Dec";
   document.getElementById("content").innerHTML = findGetParameter("fname") 
-    + ", you checked into<br><span style='color: white; font-size: 128px;'>" 
+    + ", you checked into<br><span style='color: white; font-size: 96px;'>" 
     + findGetParameter("venue").replace('+',' ').replace('+',' ').replace('+',' ').replace('+',' ')
     + "</span><br><span style=\"font-family:'Avrile Sans Regular'; font-size: 48px;\">on " + weekday[currentdate.getDay()] + " " + currentdate.getDate() + " " + months[currentdate.getMonth()] + " " + currentdate.getFullYear() 
     + " at " + (currentdate.getHours() < 13? currentdate.getHours() : currentdate.getHours()-12) + ":" + (currentdate.getMinutes() < 10? '0' : '') + currentdate.getMinutes()
