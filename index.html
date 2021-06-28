@@ -23,6 +23,7 @@
       color:  #d3d3d3;
       text-align: center;
       margin: 0;
+      font-size: 64px;
     }
     </style>
   </head>
@@ -74,9 +75,9 @@ if (findGetParameter("fname") != null) {
   months[10] = "November";
   months[11] = "December";
   document.getElementById("content").innerHTML = findGetParameter("fname") 
-    + ", you checked into<br><span style='color: white; font-size: large;'>" 
+    + ", you checked into<br><span style='color: white; font-size: 128px;'>" 
     + findGetParameter("venue") 
-    + "</span><br><span style=\"font-family:'Avrile Sans Regular';\">on " + weekday[currentdate.getDay()] + " " + currentdate.getDate() + " " + months[currentdate.getMonth()] + " " + currentdate.getFullYear() 
+    + "</span><br><span style=\"font-family:'Avrile Sans Regular'; font-size: 48px;\">on " + weekday[currentdate.getDay()] + " " + currentdate.getDate() + " " + months[currentdate.getMonth()] + " " + currentdate.getFullYear() 
     + " at " + (currentdate.getHours() < 13? currentdate.getHours() : currentdate.getHours()-12) + ":" + (currentdate.getMinutes() < 10? '0' : '') + currentdate.getMinutes()
     + ":" + (currentdate.getSeconds() < 10? '0' : '') + currentdate.getSeconds() + " " + (currentdate.getHours() < 12? "AM" : "PM") + "</span>";
 }
