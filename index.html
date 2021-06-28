@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html>
 <body style="background: #5f1e26 url(tick.png) no-repeat fixed center 100px;">
-<form action="index.html" method="get">
+<form id="form" action="index.html" method="get">
   <label for="fname">First name:</label><input type="text" id="fname" name="fname" value="John"><br>
   <label for="venue">Place:</label><input type="text" id="venue" name="venue" value="Coles"><br>
   <input type="submit" value="Submit">
 </form>
+<script>
+function findGetParameter(parameterName) {
+    var result = null,
+        tmp = [];
+    location.search
+        .substr(1)
+        .split("&")
+        .forEach(function (item) {
+          tmp = item.split("=");
+          if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+        });
+    return result;
+}
+if (findGetParameter(fname) != null) {
+  document.getElementById("form").style.visibility = "hidden";
+}
+
+</script>
 </body>
 </html>
