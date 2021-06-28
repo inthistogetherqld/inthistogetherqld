@@ -39,15 +39,7 @@ function findGetParameter(parameterName) {
         });
     return result;
 }
-function timetwelve(myDate){
-    if(myDate.getHours() > 12)
-    {
-        return myDate.getHours() - 12 + ":" + myDate.getMinutes() + ":" + myDate.getSeconds() + " PM";
 
-    } else {
-        return myDate.getHours() + ":" + myDate.getMinutes() + ":" + myDate.getSeconds() + " AM";
-    }
-};
 if (findGetParameter("fname") != null) {
   document.getElementById("form").style.visibility = "hidden";
   var currentdate = new Date();
@@ -72,11 +64,18 @@ if (findGetParameter("fname") != null) {
   months[9] = "October";
   months[10] = "November";
   months[11] = "December";
+      if(currentdate.getHours() > 12)
+    {
+        var ampm =  currentdate.getHours() - 12 + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds() + " PM";
+
+    } else {
+        var ampm = currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds() + " AM";
+    }
   document.getElementById("content").innerHTML = findGetParameter("fname") 
     + ", you checked into<br><span style='color: white; font-size: large;'>" 
     + findGetParameter("venue") 
     + "</span><br>on " + weekday[currentdate.getDay()] + " " + currentdate.getDate() + " " + months[currentdate.getMonth() + " " + currentdate.getFullYear() 
-    + " at " + timetwelve(currentdate);
+    + " at " + ampm;
 }
 </script>
 </body>
