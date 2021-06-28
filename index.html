@@ -64,9 +64,10 @@ if (findGetParameter("fname") != null) {
   months[9] = "October";
   months[10] = "November";
   months[11] = "December";
-      if(currentdate.getHours() > 12)
+  var ampm = null;
+  if(currentdate.getHours() > 12)
     {
-        var ampm =  currentdate.getHours() - 12 + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds() + " PM";
+        var ampm = currentdate.getHours() - 12 + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds() + " PM";
 
     } else {
         var ampm = currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds() + " AM";
