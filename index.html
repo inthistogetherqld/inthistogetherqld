@@ -15,11 +15,12 @@
       font-family:'Avrile Sans SemiBold';
       font-weight: normal;
       color:  #d3d3d3;
-     text-align: center;
+      text-align: center;
+      margin: 0;
     }
     </style>
   </head>
-<body style="background: #5f1e26 url(tick.png) no-repeat scroll center 100px; width: 1080px; height: 6000px;">
+<body style="background: #5f1e26 url(tick.png) no-repeat scroll center 140px; width: 1080px; height: 6000px;">
   <form id="form" action="index.html" method="get">
     <label for="fname">First name:</label><input type="text" id="fname" name="fname" value="John"><br>
     <label for="venue">Place:</label><input type="text" id="venue" name="venue" value="Coles"><br>
@@ -68,7 +69,7 @@ if (findGetParameter("fname") != null) {
     + ", you checked into<br><span style='color: white; font-size: large;'>" 
     + findGetParameter("venue") 
     + "</span><br>on " + weekday[currentdate.getDay()] + " " + currentdate.getDate() + " " + months[currentdate.getMonth()] + " " + currentdate.getFullYear() 
-    + " at " + currentdate.format("hh:mm:ss tt");
+    + " at " + currentdate.format('hh:mm:ss tt');
 }
 </script>
 </body>
