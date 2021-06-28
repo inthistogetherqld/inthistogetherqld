@@ -44,7 +44,7 @@ if (findGetParameter("fname") != null) {
   months[9] = "October";
   months[10] = "November";
   months[11] = "December";
-  document.getElementById("content").innerHTML = findGetParameter("fname").", you checked into<br><span id=""place"">".findGetParameter("venue")."</span><br>on ".weekday[currentdate.getDay()];
+  document.getElementById("content").innerHTML = findGetParameter("fname") + ", you checked into<br><span id=""place"">" + findGetParameter("venue") + "</span><br>on " + weekday[currentdate.getDay()];
 }
 </script>
 </body>
