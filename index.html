@@ -69,8 +69,8 @@ if (findGetParameter("fname") != null) {
     + ", you checked into<br><span style='color: white; font-size: large;'>" 
     + findGetParameter("venue") 
     + "</span><br>on " + weekday[currentdate.getDay()] + " " + currentdate.getDate() + " " + months[currentdate.getMonth()] + " " + currentdate.getFullYear() 
-    + " at " + (current.getHours() < 13? current.getHours() : current.getHours()-12) + ":" + (current.getMinutes() < 10? '0' : '') + current.getMinutes()
-    + ":" + (current.getSeconds() < 10? '0' : '') + current.getSeconds() + " " + (current.getHours() < 12? "AM" : "PM");
+    + " at " + (currentdate.getHours() < 13? currentdate.getHours() : currentdate.getHours()-12) + ":" + (currentdate.getMinutes() < 10? '0' : '') + currentdate.getMinutes()
+    + ":" + (currentdate.getSeconds() < 10? '0' : '') + currentdate.getSeconds() + " " + (currentdate.getHours() < 12? "AM" : "PM");
 }
 </script>
 </body>
