@@ -67,10 +67,10 @@ if (findGetParameter("fname") != null) {
   var ampm = null;
   if(currentdate.getHours() > 12)
     {
-        var ampm = currentdate.getHours() - 12 + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds() + " PM";
+         ampm = currentdate.getHours() - 12 + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds() + " PM";
 
     } else {
-        var ampm = currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds() + " AM";
+         ampm = currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds() + " AM";
     }
   document.getElementById("content").innerHTML = findGetParameter("fname") 
     + ", you checked into<br><span style='color: white; font-size: large;'>" 
