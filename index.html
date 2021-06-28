@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <body style="background: #5f1e26 url(tick.png) no-repeat fixed center 100px;">
-<form id="form" action="index.html" method="get">
-  <label for="fname">First name:</label><input type="text" id="fname" name="fname" value="John"><br>
-  <label for="venue">Place:</label><input type="text" id="venue" name="venue" value="Coles"><br>
-  <input type="submit" value="Submit">
-</form>
+  <form id="form" action="index.html" method="get">
+    <label for="fname">First name:</label><input type="text" id="fname" name="fname" value="John"><br>
+    <label for="venue">Place:</label><input type="text" id="venue" name="venue" value="Coles"><br>
+    <input type="submit" value="Submit">
+  </form>
+  <div id="content"></div>
 <script>
 function findGetParameter(parameterName) {
     var result = null,
@@ -21,8 +22,30 @@ function findGetParameter(parameterName) {
 }
 if (findGetParameter("fname") != null) {
   document.getElementById("form").style.visibility = "hidden";
+  var currentdate = new Date();
+  var weekday = new Array(7);
+  weekday[0] = "Sunday";
+  weekday[1] = "Monday";
+  weekday[2] = "Tuesday";
+  weekday[3] = "Wednesday";
+  weekday[4] = "Thursday";
+  weekday[5] = "Friday";
+  weekday[6] = "Saturday";
+  var months = new Array(12);
+  months[0] = "Jan";
+  months[1] = "Feb";
+  months[2] = "Mar";
+  months[3] = "Apr";
+  months[4] = "May";
+  months[5] = "June";
+  months[6] = "July";
+  months[7] = "August";
+  months[8] = "September";
+  months[9] = "October";
+  months[10] = "November";
+  months[11] = "December";
+  document.getElementById("content").innerHTML = findGetParameter("fname").", you checked into<br><span id=""place"">".findGetParameter("venue")."</span><br>on ".weekday[currentdate.getDay()];
 }
-
 </script>
 </body>
 </html>
